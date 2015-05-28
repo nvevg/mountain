@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<node>
+  <interface name="org.freedesktop.UDisks">
+    <signal name="DeviceAdded">
+      <arg name="device" type="o"/>
+    </signal>
+    <signal name="DeviceRemoved">
+      <arg name="device" type="o"/>
+    </signal>
+    <signal name="DeviceChanged">
+      <arg name="device" type="o"/>
+    </signal>
+    <method name="EnumerateDevices">
+      <arg name="devices" type="ao" direction="out"/>
+    </method>
+  </interface>
+</node>
+

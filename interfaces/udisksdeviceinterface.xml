@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<node>
+  <interface name="org.freedesktop.UDisks.Device">
+	<property name="IdLabel" type="s" access="read"/>  		
+	<property name="DeviceFile" type="s" access="read"/>
+  	<property name="DeviceIsSystemInternal" type="b" access="read"/>
+  	<property name="DeviceIsMounted" type="b" access="read"/>
+  	<property name="DeviceMountPaths" type="as" access="read"/>
+  	<property name="DriveMediaCompatibility" type="as" access="read"/>
+  	<property name="DeviceSize" type="t" access="read"/>
+  	<property name="DeviceIsOpticalDisk" type="b" access="read"/>
+  	<property name="IdUuid" type="s" access="read"/>
+  	<property name="IdUsage" type="s" access="read"/>
+  	<property name="IdType" type="s" access="read"/>
+
+	<method name="FilesystemMount">
+		<arg name="filesystem_type" type="s" direction="in"/>
+		<arg name="options" type="as" direction="in"/>
+		<arg name="mount_path" type="s" direction="out"/>
+	</method>
+
+    <method name="FilesystemUnmount">
+      <arg name="options" type="as" direction="in"/>
+    </method>
+  </interface>
+</node>
+
